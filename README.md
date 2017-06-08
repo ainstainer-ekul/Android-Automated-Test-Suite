@@ -3,15 +3,11 @@
 #### In order to launch Appium via cmd:
 1. Open "appium" folder
 2. Open command prompt
-3. Launch runappium.cmd with following parameters
-
-Parameter1 - full path to 'appium.js' in installed Appium folder
-
-Parameter2 - full path to .apk file
-
-Parameter3 - platform version (Android 4.4 = 19, 5.0 = 21, etc. https://developer.android.com/about/dashboards/index.html )
-
-Parameter4 - device name
+3. Launch runappium.cmd with following parameters:
+- parameter1 - full path to 'appium.js' in installed Appium folder
+- parameter2 - full path to .apk file
+- parameter3 - platform version (Android 4.4 = 19, 5.0 = 21, etc. https://developer.android.com/about/dashboards/index.html )
+- parameter4 - device name
 
 
 ###### A result command should look like: 
