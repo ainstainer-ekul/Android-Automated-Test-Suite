@@ -6,7 +6,7 @@
 3. Launch runappium.cmd with following parameters:
 - parameter1 - full path to 'appium.js' in installed Appium folder
 - parameter2 - full path to .apk file
-- parameter3 - platform version (etc. Android 4.4 = 19, 5.0 = 21, https://developer.android.com/about/dashboards/index.html )
+- parameter3 - api version (ex. Android 5.0 = 21, https://developer.android.com/about/dashboards/index.html )
 - parameter4 - device name
 
 
