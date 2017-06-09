@@ -15,20 +15,25 @@ namespace AndroidAppTestSuit.hooks
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
-            //--------- comment server/broser sections for running from VS, 
+//            //--------- comment  device name/OS version sections for running from VS
+//
+//            //// Choose a device name (ex. "Google Nexus 5", "Google Nexus 10")
+//            Environment.SetEnvironmentVariable("env.DeviceName", "Google Nexus 5");
+//            //
+//            //// Choose a android OS version (ex. "4.4", "5.0")
+//            Environment.SetEnvironmentVariable("env.AndroidVersion", "4.4");
 
-            //// Choose a server (ex. "dev1", "dev2", "staging")
-            Environment.SetEnvironmentVariable("env.Server", "staging");
-            //
-            //// Choose a browser (ex. "Firefox", "Chrome", "MobileChrome", "RemoteChrome", "AndroidAppiumChrome", "IosApp", "ANDROIDAPP")
-            Environment.SetEnvironmentVariable("env.Browser", "AndroidApp");
+            //// Choose full path to app
+            Environment.SetEnvironmentVariable("env.AppVersion", "com.soundcloud.android_2017.05.30-beta-674_minAPI16(armeabi,armeabi-v7a,x86)(nodpi)_apkmirror.com.apk");
 
+            String deviceName = Environment.GetEnvironmentVariable("env.DeviceName");
+            Console.WriteLine("|| DeviceName     |  " + deviceName);
 
-            String server = Environment.GetEnvironmentVariable("env.Server");
-            Console.WriteLine("|| server  |  " + server);
+            String androidVersion = Environment.GetEnvironmentVariable("env.AndroidVersion");
+            Console.WriteLine("|| AndroidVersion |  " + androidVersion);
 
-            String browser = Environment.GetEnvironmentVariable("env.Browser");
-            Console.WriteLine("|| browser |  " + browser);
+            String appVersion = Environment.GetEnvironmentVariable("env.AppVersion");
+            Console.WriteLine("|| AppVersion     |  " + appVersion);
 
             setUniqueValue(Common.GenerateRandomValue());
         }
@@ -37,7 +42,7 @@ namespace AndroidAppTestSuit.hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
-  
+            GetSuite().GetSeleniumWebdriver().ResetApp();
         }
 
         [AfterScenario]

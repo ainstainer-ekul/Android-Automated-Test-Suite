@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
@@ -32,18 +33,22 @@ namespace AndroidAppTestSuit.webdriver
         public SeleniumWebdriver()
         {
             DesiredCapabilities androidAppiumAppCapability = new DesiredCapabilities();
-            //
-            //            androidAppiumAppCapability.SetCapability("deviceName", "Google Nexus 5");
-            //            androidAppiumAppCapability.SetCapability("platformName", "Android");
-            //            androidAppiumAppCapability.SetCapability("platformVersion", "4.4");
-            //
+            
+            androidAppiumAppCapability.SetCapability("deviceName", Environment.GetEnvironmentVariable("env.DeviceName"));
+            androidAppiumAppCapability.SetCapability("platformVersion", Environment.GetEnvironmentVariable("env.AndroidVersion"));
 
-            androidAppiumAppCapability.SetCapability("deviceName", "Google Nexus 10");
+            androidAppiumAppCapability.SetCapability("fullReset", true);
+
+            string appPath = Common.GetFilePathForRunViaSpecrun(Common.GetProjectRootDir()) + Path.DirectorySeparatorChar + "androidApp"
+                + Path.DirectorySeparatorChar + Environment.GetEnvironmentVariable("env.AppVersion");
+
+            androidAppiumAppCapability.SetCapability("app", appPath);
             androidAppiumAppCapability.SetCapability("platformName", "Android");
-            androidAppiumAppCapability.SetCapability("platformVersion", "5.0");
+            androidAppiumAppCapability.SetCapability("appActivity", @"com.soundcloud.android.main.LauncherActivity");
+            androidAppiumAppCapability.SetCapability("appPackage", @"com.soundcloud.android");
 
-            driver = new AndroidDriver<AndroidElement>(new Uri(Common.GetConfigValue("android_appium_server")), androidAppiumAppCapability, TimeSpan.FromSeconds(PAGE_LOAD_TIMEOUT_SEC));     
-          
+            driver = new AndroidDriver<IWebElement>(new Uri(Common.GetConfigValue("android_appium_server")), androidAppiumAppCapability, TimeSpan.FromSeconds(PAGE_LOAD_TIMEOUT_SEC));
+
             this.driverWait = new WebDriverWait(driver, TimeSpan.FromSeconds(ELEMENT_LOAD_TIMEOUT_SEC));
         }
 
@@ -371,10 +376,9 @@ namespace AndroidAppTestSuit.webdriver
             driver.FindElement(locator).Click();
         }
 
-        public void HardRefresh()
+        public void ResetApp()
         {
-            Actions actionObject = new Actions(driver);
-            actionObject.KeyDown(Keys.Control).SendKeys(Keys.F5).Perform();
+            ((AndroidDriver<IWebElement>)driver).ResetApp();
         }
     }
 }

@@ -6,10 +6,17 @@
 
 @cd ..\packages\SpecRun.Runner.*\tools
 
-@set profile=%1
-@if "%profile%" == "" set profile=Default
+@set env.DeviceName=%1
+@set env.AndroidVersion=%2
+@set env.Feature=%3
 
-SpecRun.exe run %profile%.srprofile "/baseFolder:%~dp0\bin\Debug" /log:specrun.log %2 %3 %4 %5
+@if %env.Feature% == all (@set env.Filter=/filter:!@autotestsDataDelete ) else (  @set env.Filter=/filter:%3 ) 
+
+@set env.TestResultsReport=/report:testresults/LatestSpecflowReport.html 
+
+SpecRun.exe run Default.srprofile "/baseFolder:%~dp0\bin\Debug" /log:specrun.log %env.Filter% %env.TestResultsReport%
+
+@if ERRORLEVEL 440 ( EXIT -1 )
 
 :end
 

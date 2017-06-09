@@ -17,7 +17,7 @@ namespace AndroidAppTestSuit.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Login", SourceFile="features\\Login.feature", SourceLine=1)]
+    [TechTalk.SpecRun.FeatureAttribute("Login", SourceFile="features\\Login.feature", SourceLine=0)]
     public partial class LoginFeature
     {
         
@@ -61,46 +61,44 @@ namespace AndroidAppTestSuit.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("User can log in", SourceLine=3)]
+        [TechTalk.SpecRun.ScenarioAttribute("User can log in", SourceLine=2)]
         public virtual void UserCanLogIn()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User can log in", ((string[])(null)));
-#line 4
+#line 3
  this.ScenarioSetup(scenarioInfo);
-#line 5
+#line 4
   testRunner.When("tap \'Sign In\' button on [Home] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 6
+#line 5
   testRunner.And("fill in a email field with \'pre-setup evgeniy.kulikov@ainstainer.de\' on [Login] t" +
                     "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 7
+#line 6
   testRunner.And("fill in a password field with \'Testing123\' on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 8
+#line 7
   testRunner.And("tap \'Done\' button on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 9
+#line 8
   testRunner.Then("should see \'Search SoundCloud\' placeholder text \'Search\' field on [Search] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Error popup is displayed after an attempt to log in with wrong credentials", new string[] {
-                "featureInProgress"}, SourceLine=12)]
+        [TechTalk.SpecRun.ScenarioAttribute("Error popup is displayed after an attempt to log in with wrong credentials", SourceLine=10)]
         public virtual void ErrorPopupIsDisplayedAfterAnAttemptToLogInWithWrongCredentials()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Error popup is displayed after an attempt to log in with wrong credentials", new string[] {
-                        "featureInProgress"});
-#line 13
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Error popup is displayed after an attempt to log in with wrong credentials", ((string[])(null)));
+#line 11
  this.ScenarioSetup(scenarioInfo);
-#line 14
+#line 12
   testRunner.When("tap \'Sign In\' button on [Home] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
+#line 13
   testRunner.And("fill in a email field with \'pre-setup evgeniy.kulikov@ainstainer.de\' on [Login] t" +
                     "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
+#line 14
   testRunner.And("fill in a password field with \'wrongPass\' on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
+#line 15
   testRunner.And("tap \'Done\' button on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 18
+#line 16
   testRunner.Then("should see an error popup with a following text:", "We couldn’t sign you in. Sure you have the right email and password?", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
