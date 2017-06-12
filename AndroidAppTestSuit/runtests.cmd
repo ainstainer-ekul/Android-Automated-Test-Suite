@@ -7,10 +7,9 @@
 @cd ..\packages\SpecRun.Runner.*\tools
 
 @set env.DeviceName=%1
-@set env.AndroidVersion=%2
-@set env.Feature=%3
+@set env.Feature=%2
 
-@if %env.Feature% == all (@set env.Filter=/filter:!@autotestsDataDelete ) else (  @set env.Filter=/filter:%3 ) 
+@if %env.Feature% == all (@set env.Filter=/filter:!@autotestsDataDelete ) else (  @set env.Filter=/filter:%2 ) 
 
 @set env.TestResultsReport=/report:testresults/LatestSpecflowReport.html 
 

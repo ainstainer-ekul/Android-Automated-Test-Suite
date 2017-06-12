@@ -15,22 +15,22 @@ namespace AndroidAppTestSuit.hooks
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
-//            //--------- comment  device name/OS version sections for running from VS
-//
-//            //// Choose a device name (ex. "Google Nexus 5", "Google Nexus 10")
-//            Environment.SetEnvironmentVariable("env.DeviceName", "Google Nexus 5");
-//            //
-//            //// Choose a android OS version (ex. "4.4", "5.0")
-//            Environment.SetEnvironmentVariable("env.AndroidVersion", "4.4");
+            //            //--------- comment  device name/OS version sections for running from VS
 
+            ////            runtests.cmd "Google Nexus 5_4.4" testpath: Feature* Login*
+            ////           "Google Nexus 5_4.4"
+            ////           "Google Nexus 10_5.0"
+            //////        Choose a device name (ex. "Google Nexus 5", "Google Nexus 10")
+            //            Environment.SetEnvironmentVariable("env.DeviceName", "Google Nexus 5_4.4");
+
+            
             //// Choose full path to app
             Environment.SetEnvironmentVariable("env.AppVersion", "com.soundcloud.android_2017.05.30-beta-674_minAPI16(armeabi,armeabi-v7a,x86)(nodpi)_apkmirror.com.apk");
 
-            String deviceName = Environment.GetEnvironmentVariable("env.DeviceName");
-            Console.WriteLine("|| DeviceName     |  " + deviceName);
+            String deviceName = Environment.GetEnvironmentVariable("env.DeviceNameAndOS").Replace("\"", "");
+            Console.WriteLine("|| DeviceName     |  " + deviceName.Split('_')[0]);
 
-            String androidVersion = Environment.GetEnvironmentVariable("env.AndroidVersion");
-            Console.WriteLine("|| AndroidVersion |  " + androidVersion);
+            Console.WriteLine("|| AndroidVersion |  " + deviceName.Split('_')[1]);
 
             String appVersion = Environment.GetEnvironmentVariable("env.AppVersion");
             Console.WriteLine("|| AppVersion     |  " + appVersion);
