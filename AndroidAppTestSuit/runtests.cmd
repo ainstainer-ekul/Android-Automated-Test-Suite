@@ -6,7 +6,7 @@
 
 @cd ..\packages\SpecRun.Runner.*\tools
 
-@set env.DeviceName=%1
+@set env.DeviceNameAndOS=%1
 @set env.Feature=%2
 
 @if %env.Feature% == all (@set env.Filter=/filter:!@autotestsDataDelete ) else (  @set env.Filter=/filter:%2 ) 

@@ -33,9 +33,12 @@ namespace AndroidAppTestSuit.webdriver
         public SeleniumWebdriver()
         {
             DesiredCapabilities androidAppiumAppCapability = new DesiredCapabilities();
-            
-            androidAppiumAppCapability.SetCapability("deviceName", Environment.GetEnvironmentVariable("env.DeviceName"));
-            androidAppiumAppCapability.SetCapability("platformVersion", Environment.GetEnvironmentVariable("env.AndroidVersion"));
+
+            string deviceNameAndOS = Environment.GetEnvironmentVariable("env.DeviceNameAndOS");
+            String deviceName = deviceNameAndOS.Replace("\"", "");
+
+            androidAppiumAppCapability.SetCapability("deviceName", deviceName.Split('_')[0]);
+            androidAppiumAppCapability.SetCapability("platformVersion", deviceName.Split('_')[1]);
 
             androidAppiumAppCapability.SetCapability("fullReset", true);
 

@@ -16,4 +16,4 @@ runappium.cmd "C:\Program Files (x86)\Appium\node_modules\appium\bin\appium.js" 
 
  
  
-Example line for running tests via cmd: runtests.cmd "Google Nexus 5" 4.4 testpath:Feature*Login*
+Example line for running tests via cmd: runtests.cmd "Google Nexus 5_4.4.4" testpath:Feature*Login*
