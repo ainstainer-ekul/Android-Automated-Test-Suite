@@ -5,65 +5,50 @@ Test Suite Dump
 #0: AndroidAppTestSuit/Default - 
 #1: Default - 
 #2: AndroidAppTestSuit - 
-#3: Login - 
-#4: User can log in - TestAssembly:AndroidAppTestSuit/Feature:Login/Scenario:User+can+log+in
-#5: Error popup is displayed after an attempt to log in with wrong credentials - TestAssembly:AndroidAppTestSuit/Feature:Login/Scenario:Error+popup+is+displayed+after+an+attempt+to+log+in+with+wrong+credentials
+#6: UserProfile - 
+#7: User can not to see his avatar in the full screen mode - TestAssembly:AndroidAppTestSuit/Feature:UserProfile/Scenario:User+can+not+to+see+his+avatar+in+the+full+screen+mode
 End: Test Suite Dump
 Thread#0:Scheduler: get next test for thread
-Thread#:Scheduler: testitem #4 from normal test queue 
-Thread#0:Scheduler: considering testitem #4 for thread
-Thread#0:Scheduler: using testitem #4 for thread
-Thread#0:Scheduler: Test #4 is scheduled for thread
+Thread#:Scheduler: testitem #7 from normal test queue 
+Thread#0:Scheduler: considering testitem #7 for thread
+Thread#0:Scheduler: using testitem #7 for thread
+Thread#0:Scheduler: Test #7 is scheduled for thread
 Thread#0:Scheduler: with testItemExecutionIndex 0
 Thread #0: creating new test thread executor for AndroidAppTestSuit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
 Loading SpecRun type 'TechTalk.SpecRun.Framework.TestAssemblyExecutor' from: C:\Projects\AndroidTestSuite\Android-Automated-Test-Suite\packages\SpecRun.Runner.1.5.2\tools\TechTalk.SpecRun.Framework.Executor.dll
-Thread#0: Test #4/0 is started on thread #0
-Thread#0:T:|| deviceNameAndOS |  Google Nexus 5_4.4
+Thread#0: Test #7/0 is started on thread #0
 Thread#0:T:|| DeviceName      |  Google Nexus 5
-Thread#0:T:|| AndroidVersion  |  4.4
+Thread#0:T:|| AndroidVersion  |  4.4.4
 Thread#0:T:|| AppVersion      |  com.soundcloud.android_2017.05.30-beta-674_minAPI16(armeabi,armeabi-v7a,x86)(nodpi)_apkmirror.com.apk
-Thread#0:T:Current unique value: '-ppe'
+Thread#0:T:Current unique value: '-ghc'
 Thread#0:B:When tap 'Sign In' button on [Home] tab
-Thread#0:T:done: LoginSteps.WhenTapButtonOnHomeTab("Sign In", "Home") (1,8s)
+Thread#0:T:done: CommonSteps.WhenTapButtonOnHomeTab("Sign In", "Home") (1,6s)
 Thread#0:B:And fill in a email field with 'pre-setup evgeniy.kulikov@ainstainer.de' on [Login] tab
-Thread#0:T:done: LoginSteps.WhenFillInAEmailFieldWithOnLoginTab("pre-setup evgeniy...") (12,7s)
+Thread#0:T:done: LoginSteps.WhenFillInAEmailFieldWithOnLoginTab("pre-setup evgeniy...") (16,8s)
 Thread#0:B:And fill in a password field with 'Testing123' on [Login] tab
-Thread#0:T:done: LoginSteps.WhenFillInAPasswordFieldWithOnLoginTab("Testing123") (7,7s)
+Thread#0:T:done: LoginSteps.WhenFillInAPasswordFieldWithOnLoginTab("Testing123") (10,1s)
 Thread#0:B:And tap 'Done' button on [Login] tab
-Thread#0:T:done: LoginSteps.WhenTapButtonOnHomeTab("Done", "Login") (0,9s)
-Thread#0:B:Then should see 'Search SoundCloud' placeholder text 'Search' field on [Search] tab
-Thread#0:T:done: LoginSteps.ThenShouldSeePlacehoderOnSearchTab("Search SoundCloud", "Search") (7,9s)
-Thread#0:Scheduler: get next test for thread
-Thread#:Scheduler: testitem #5 from normal test queue 
-Thread#0:Scheduler: considering testitem #5 for thread
-Thread#0:Scheduler: using testitem #5 for thread
-Thread#0:Scheduler: Test #5 is scheduled for thread
-Thread#0:Scheduler: with testItemExecutionIndex 0
-Thread#0: Test #4/0 is finished on thread #0 as Succeeded within 54,6169354 seconds
-Thread#0: Test #5/0 is started on thread #0
-Thread#0:B:When tap 'Sign In' button on [Home] tab
-Thread#0:T:done: LoginSteps.WhenTapButtonOnHomeTab("Sign In", "Home") (1,5s)
-Thread#0:B:And fill in a email field with 'pre-setup evgeniy.kulikov@ainstainer.de' on [Login] tab
-Thread#0:T:done: LoginSteps.WhenFillInAEmailFieldWithOnLoginTab("pre-setup evgeniy...") (15,2s)
-Thread#0:B:And fill in a password field with 'wrongPass' on [Login] tab
-Thread#0:T:done: LoginSteps.WhenFillInAPasswordFieldWithOnLoginTab("wrongPass") (7,6s)
-Thread#0:B:And tap 'Done' button on [Login] tab
-Thread#0:T:done: LoginSteps.WhenTapButtonOnHomeTab("Done", "Login") (1,0s)
-Thread#0:B:Then should see an error popup with a following text:
-Thread#0:B:  --- multiline step argument ---
-Thread#0:B:  We couldn’t sign you in. Sure you have the right email and password?
-Thread#0:T:done: CommonSteps.ThenShouldSeeAnErrorPopupWithAFollowingText("We couldn’t sign ...") (2,0s)
+Thread#0:T:done: CommonSteps.WhenTapButtonOnHomeTab("Done", "Login") (1,1s)
+Thread#0:B:And tap 'More' button on navigation bar
+Thread#0:T:done: CommonSteps.WhenTapButtonOnNavigationBar("More") (7,1s)
+Thread#0:B:And tap 'Avatar' image on [More] tab
+Thread#0:T:done: CommonSteps.WhenTapButtonOnHomeTab("Avatar", "More") (3,2s)
+Thread#0:B:And tap 'Avatar' image on [You] tab
+Thread#0:T:done: CommonSteps.WhenTapButtonOnHomeTab("Avatar", "You") (1,5s)
+Thread#0:B:Then should see 'There was a problem loading the image' toast
+Thread#0:T:Screenshot: file:///C:/Projects/AndroidTestSuite/Android-Automated-Test-Suite/AndroidAppTestSuit/bin/Debug/testresults/UserProfile_UserCanNotToSeeHisAvatarInTheFullScreenMode_20170613_134525_screenshot_with_toast_message.png
+Thread#0:T:done: CommonSteps.ThenShouldSeePopup("There was a probl...") (5,8s)
 Thread#0:Scheduler: get next test for thread
 Thread#:Scheduler: at the end of normal test queue
 Thread#0:Scheduler: enumerator for thread is at end
 Thread#0:Scheduler: No more tests for thread 
-Thread#0: Test #5/0 is finished on thread #0 as Succeeded within 42,3088726 seconds
+Thread#0: Test #7/0 is finished on thread #0 as Succeeded within 76,5867253 seconds
 Appdomain Disposed
 Thread#-1:Scheduler: get next test for thread
 Thread#:Scheduler: at the end of normal test queue
 Thread#-1:Scheduler: enumerator for thread is at end
-Total: 2
-Succeeded: 2
+Total: 1
+Succeeded: 1
 Ignored: 0
 Pending: 0
 Skipped: 0

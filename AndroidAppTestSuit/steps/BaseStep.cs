@@ -66,8 +66,9 @@ namespace AndroidAppTestSuit.steps
             System.Console.WriteLine(String.Format("Current unique value: '{0}'", uniqueValue));
         }
 
-        public void TakeScreenshot(IWebDriver driver)
+        public string TakeScreenshot(IWebDriver driver, string fileName)
         {
+            string screenshotFilePath = null;
             try
             {
                 string fileNameBase = string.Format("{0}_{1}_{2}",
@@ -85,7 +86,7 @@ namespace AndroidAppTestSuit.steps
                 {
                     var screenshot = takesScreenshot.GetScreenshot();
 
-                    string screenshotFilePath = System.IO.Path.Combine(artifactDirectory, fileNameBase + "_screenshot.png");
+                    screenshotFilePath = System.IO.Path.Combine(artifactDirectory, fileNameBase + fileName+ ".png");
 
                     screenshot.SaveAsFile(screenshotFilePath, ImageFormat.Png);
 
@@ -96,6 +97,7 @@ namespace AndroidAppTestSuit.steps
             {
                 Console.WriteLine("Error while taking screenshot: {0}", ex);
             }
+            return screenshotFilePath;
         }
 
         public static Boolean IsNotEmpty(String str)

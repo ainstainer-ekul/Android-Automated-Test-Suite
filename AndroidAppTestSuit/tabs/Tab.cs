@@ -12,12 +12,6 @@ namespace AndroidAppTestSuit.tabs
     {
         public SeleniumWebdriver webDriver;
 
-//        protected By progressSpinner = By.CssSelector(".progress");
-//        protected By iframe = By.XPath("//iframe");
-//        protected By loggedInUsername = By.XPath("//*[@size='32']/..");
-//
-//        protected const string iFrameUrl = "?iframeView=false";
-
         public Tab(SeleniumWebdriver seleniumWebdriver)
         {
             this.webDriver = seleniumWebdriver;

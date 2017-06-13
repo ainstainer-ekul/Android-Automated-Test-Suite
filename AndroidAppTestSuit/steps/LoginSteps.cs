@@ -9,23 +9,7 @@ namespace AndroidAppTestSuit.steps
     [Binding]
     public class LoginSteps : BaseStep
     {
-        [When(@"tap '(.*)' button on \[(.*)] tab")]
-        public void WhenTapButtonOnHomeTab(string button, string tab)
-        {
-            if (tab.Equals("Home"))
-            {
-                GetSuite().GetTabInit().GetHomeTab().PressButton(button);
-            }
-            else if (tab.Equals("Login"))
-            {
-                GetSuite().GetTabInit().GetLoginTab().PressButton(button);
-            }
-            else
-            {
-                throw new ArgumentException(String.Format("'{0}' - unsupported tab", tab));
-            }
-        }
-        
+       
         [When(@"fill in a email field with '(.*)' on \[Login] tab")]
         public void WhenFillInAEmailFieldWithOnLoginTab(string email)
         {

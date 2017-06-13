@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AndroidAppTestSuit.tabs.more;
 using AndroidAppTestSuit.tabs.popup;
 using AndroidAppTestSuit.webdriver;
 
@@ -35,5 +36,26 @@ namespace AndroidAppTestSuit.tabs
         {
             return new ErrorPopup(webDriver);
         }
+
+        public NavTab GetNavTab()
+        {
+            return new NavTab(webDriver);
+        }
+
+        public MoreTab GetMoreTab()
+        {
+            return new MoreTab(webDriver);
+        }
+
+        public YouTab GetYouTab()
+        {
+            return new YouTab(webDriver);
+        }
+
+        public Tab GetBaseTab()
+        {
+            return new Tab(webDriver);
+        }
+       
     }
 }

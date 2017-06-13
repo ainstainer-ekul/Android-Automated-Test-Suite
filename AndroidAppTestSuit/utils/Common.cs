@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using Tesseract;
 
 namespace AndroidAppTestSuit.utils
 {
@@ -108,6 +109,20 @@ namespace AndroidAppTestSuit.utils
             else
             {
                 return "true";
+            }
+        }
+
+        public static string GetTextFromImage(string imageDir)
+        {
+
+            string tessDataDir = Common.GetFilePathForRunViaSpecrun(Common.GetProjectRootDir()) +
+                                 Path.DirectorySeparatorChar + "tessdata";
+       
+            using (var engine = new TesseractEngine(tessDataDir, "eng", EngineMode.Default))
+            using (var image = Pix.LoadFromFile(imageDir))
+            using (var page = engine.Process(image))
+            {
+                return page.GetText();
             }
         }
     }

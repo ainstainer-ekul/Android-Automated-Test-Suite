@@ -16,7 +16,7 @@ namespace AndroidAppTestSuit.tabs
         {
         }
 
-        public void PressButton(String button)
+        public void TapButton(String button)
         {
             By buttonLocator;
             if (button.Equals("Sign In"))
