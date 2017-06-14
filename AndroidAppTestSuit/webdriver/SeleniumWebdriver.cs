@@ -25,8 +25,7 @@ namespace AndroidAppTestSuit.webdriver
     public class SeleniumWebdriver : IWebDriver, ISearchContext
     {
         private IWebDriver driver;
-        private int PAGE_LOAD_TIMEOUT_SEC = 45;
-        private int PAGE_SCRIPT_TIMEOUT_SEC = 45;
+        private int PAGE_LOAD_TIMEOUT_SEC = 60;
         private int ELEMENT_LOAD_TIMEOUT_SEC = 30;
         private WebDriverWait driverWait;
 
@@ -240,17 +239,6 @@ namespace AndroidAppTestSuit.webdriver
 
             IJavaScriptExecutor executor = driver as IJavaScriptExecutor;
             executor.ExecuteScript(javaScript, webElement);
-        }
-
-
-        public void WaitUntilDocumentIsReady()
-        {
-            var javaScriptExecutor = driver as IJavaScriptExecutor;
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(PAGE_LOAD_TIMEOUT_SEC));
-
-            Func<IWebDriver, bool> readyCondition = wDriver => (bool)javaScriptExecutor.ExecuteScript("return (document.readyState == 'complete')");
-
-            wait.Until(readyCondition);
         }
 
         public void SelectFromDropDownList(By by, String item)
