@@ -25,7 +25,7 @@ namespace AndroidAppTestSuit.webdriver
     public class SeleniumWebdriver : IWebDriver, ISearchContext
     {
         private IWebDriver driver;
-        private int PAGE_LOAD_TIMEOUT_SEC = 60;
+        private int PAGE_LOAD_TIMEOUT_SEC = 45;
         private int ELEMENT_LOAD_TIMEOUT_SEC = 30;
         private WebDriverWait driverWait;
 
@@ -49,7 +49,9 @@ namespace AndroidAppTestSuit.webdriver
             androidAppiumAppCapability.SetCapability("appActivity", @"com.soundcloud.android.main.LauncherActivity");
             androidAppiumAppCapability.SetCapability("appPackage", @"com.soundcloud.android");
 
-            driver = new AndroidDriver<IWebElement>(new Uri(Common.GetConfigValue("android_appium_server")), androidAppiumAppCapability, TimeSpan.FromSeconds(PAGE_LOAD_TIMEOUT_SEC));
+            Console.WriteLine("| deviceName || " + deviceName.Split('_')[2] );
+
+            driver = new AndroidDriver<IWebElement>(new Uri(deviceName.Split('_')[2] + "/wd/hub"), androidAppiumAppCapability, TimeSpan.FromSeconds(PAGE_LOAD_TIMEOUT_SEC));
 
             this.driverWait = new WebDriverWait(driver, TimeSpan.FromSeconds(ELEMENT_LOAD_TIMEOUT_SEC));
         }

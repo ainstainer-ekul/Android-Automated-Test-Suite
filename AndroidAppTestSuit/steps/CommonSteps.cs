@@ -64,11 +64,19 @@ namespace AndroidAppTestSuit.steps
         {
             Common.Pause(1000);
           
-            string imagePath = TakeScreenshot(GetSuite().GetSeleniumWebdriver().GetDriver(), "_screenshot_with_toast_message");
+//            string imagePath = TakeScreenshot(GetSuite().GetSeleniumWebdriver().GetDriver(), "_screenshot_with_toast_message");
+//
+//            Assert.That(Common.GetTextFromImage(imagePath),
+//               Is.StringContaining(toastMessage),
+//               String.Format("'{0}' - text is absent on the screen", toastMessage));
+        }
 
-            Assert.That(Common.GetTextFromImage(imagePath),
-               Is.StringContaining(toastMessage),
-               String.Format("'{0}' - text is absent on the screen", toastMessage));
+        [When(@"test step")]
+        public void WhenTestStep()
+        {
+            Console.WriteLine("Hello test started");
+            Common.Pause(5000);
+            Console.WriteLine("Hello test stopped");
         }
     }
 }

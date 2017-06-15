@@ -1,4 +1,5 @@
-﻿Feature: UserProfile
+﻿
+Feature: UserProfile
 
 	Scenario: User can not to see his avatar in the full screen mode
 		When tap 'Sign In' button on [Home] tab
