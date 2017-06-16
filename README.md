@@ -16,5 +16,7 @@ Also examples of config files are placed in exampleOfConfigFiles folder.
 #### In order to launch autotests of a specific feature:
 
 1. Open AndroidAppTestSuit folder 
-2. Open a command prompt and launch command: runtests.cmd "Google Nexus 6_5.1_http://127.0.0.1:4723" testpath:Feature\*Login\*
+2. Open a command prompt and launch command: 
+runtests.cmd "Google Nexus 6_5.1_http://127.0.0.1:4723" testpath:Feature\*Login\*
+
 (in double quotes should be specified the device name, Android version, url of launched node )
