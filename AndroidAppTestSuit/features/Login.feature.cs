@@ -77,28 +77,32 @@ namespace AndroidAppTestSuit.Features
 #line 7
   testRunner.And("tap \'Done\' button on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 8
+  testRunner.And("tap \'Ok\' button on [SoundCloud won\'t run without Google Play services] popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
   testRunner.Then("should see \'Search SoundCloud\' placeholder text \'Search\' field on [Search] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Error popup is displayed after an attempt to log in with wrong credentials", SourceLine=10)]
+        [TechTalk.SpecRun.ScenarioAttribute("Error popup is displayed after an attempt to log in with wrong credentials", SourceLine=11)]
         public virtual void ErrorPopupIsDisplayedAfterAnAttemptToLogInWithWrongCredentials()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Error popup is displayed after an attempt to log in with wrong credentials", ((string[])(null)));
-#line 11
- this.ScenarioSetup(scenarioInfo);
 #line 12
-  testRunner.When("tap \'Sign In\' button on [Home] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ this.ScenarioSetup(scenarioInfo);
 #line 13
+  testRunner.When("tap \'Sign In\' button on [Home] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 14
   testRunner.And("fill in a email field with \'pre-setup evgeniy.kulikov@ainstainer.de\' on [Login] t" +
                     "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
-  testRunner.And("fill in a password field with \'wrongPass\' on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
-  testRunner.And("tap \'Done\' button on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
+  testRunner.And("fill in a password field with \'wrongPass\' on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
+  testRunner.And("tap \'Done\' button on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+  testRunner.And("tap \'Ok\' button on [SoundCloud won\'t run without Google Play services] popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 18
   testRunner.Then("should see an error popup with a following text:", "We couldn’t sign you in. Sure you have the right email and password?", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

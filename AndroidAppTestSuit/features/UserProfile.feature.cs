@@ -17,7 +17,7 @@ namespace AndroidAppTestSuit.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("UserProfile", SourceFile="features\\UserProfile.feature", SourceLine=1)]
+    [TechTalk.SpecRun.FeatureAttribute("UserProfile", SourceFile="features\\UserProfile.feature", SourceLine=0)]
     public partial class UserProfileFeature
     {
         
@@ -61,21 +61,23 @@ namespace AndroidAppTestSuit.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("User can not to see his avatar in the full screen mode", SourceLine=3)]
+        [TechTalk.SpecRun.ScenarioAttribute("User can not to see his avatar in the full screen mode", SourceLine=2)]
         public virtual void UserCanNotToSeeHisAvatarInTheFullScreenMode()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User can not to see his avatar in the full screen mode", ((string[])(null)));
-#line 4
+#line 3
  this.ScenarioSetup(scenarioInfo);
-#line 5
+#line 4
   testRunner.When("tap \'Sign In\' button on [Home] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 6
+#line 5
   testRunner.And("fill in a email field with \'pre-setup evgeniy.kulikov@ainstainer.de\' on [Login] t" +
                     "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 7
+#line 6
   testRunner.And("fill in a password field with \'Testing123\' on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 8
+#line 7
   testRunner.And("tap \'Done\' button on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 8
+  testRunner.And("tap \'Ok\' button on [SoundCloud won\'t run without Google Play services] popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
   testRunner.And("tap \'More\' button on navigation bar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10

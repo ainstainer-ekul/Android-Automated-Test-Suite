@@ -18,7 +18,7 @@ namespace AndroidAppTestSuit.steps
     [Binding]
     public class CommonSteps : BaseStep
     {
-        [When(@"tap '(.*)' (?:button|image) on \[(.*)] tab")]
+        [When(@"tap '(.*)' (?:button|image) on \[(.*)] (?:tab|popup)")]
         public void WhenTapButtonOnHomeTab(string button, string tab)
         {
             if (tab.Equals("Home"))
@@ -36,6 +36,10 @@ namespace AndroidAppTestSuit.steps
             else if (tab.Equals("You"))
             {
                 GetSuite().GetTabInit().GetYouTab().TapButton(button);
+            }
+            else if (tab.Equals("SoundCloud won't run without Google Play services"))
+            {
+                GetSuite().GetTabInit().GetBaseTab().TapButton(button);
             }
             else
             {
