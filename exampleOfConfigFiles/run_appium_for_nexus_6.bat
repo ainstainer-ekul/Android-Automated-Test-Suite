@@ -1,0 +1,1 @@
+appium -a 127.0.0.1 -p 4723 --full-reset --bootstrap-port 4727 -U 192.168.210.102:5555 --nodeconfig nodeconfig_nexus_6.json
