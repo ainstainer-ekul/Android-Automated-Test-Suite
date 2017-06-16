@@ -19,4 +19,4 @@ Also examples of config files are placed in exampleOfConfigFiles folder.
 2. Open a command prompt and launch command: 
 runtests.cmd "Google Nexus 6_5.1_http://127.0.0.1:4723" testpath:Feature\*Login\*
 
-(in double quotes should be specified the device name, Android version, url of launched node )
+In double quotes should be specified the device name, Android version, url of launched node.
