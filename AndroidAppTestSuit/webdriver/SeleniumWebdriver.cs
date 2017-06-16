@@ -25,7 +25,7 @@ namespace AndroidAppTestSuit.webdriver
     public class SeleniumWebdriver : IWebDriver, ISearchContext
     {
         private IWebDriver driver;
-        private int PAGE_LOAD_TIMEOUT_SEC = 45;
+        private int PAGE_LOAD_TIMEOUT_SEC = 60;
         private int ELEMENT_LOAD_TIMEOUT_SEC = 30;
         private WebDriverWait driverWait;
 
