@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AndroidAppTestSuit.tabs.more;
 using AndroidAppTestSuit.tabs.popup;
+using AndroidAppTestSuit.tabs.webview;
 using AndroidAppTestSuit.webdriver;
 
 namespace AndroidAppTestSuit.tabs
@@ -56,6 +57,15 @@ namespace AndroidAppTestSuit.tabs
         {
             return new Tab(webDriver);
         }
-       
+
+        public Tab GetOneMoreStepTab()
+        {
+            return new OneMoreStepTab(webDriver);
+        }
+
+        public FacebookWebView GetFacebookWebView()
+        {
+            return new FacebookWebView(webDriver);
+        }
     }
 }

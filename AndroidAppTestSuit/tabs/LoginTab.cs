@@ -13,6 +13,7 @@ namespace AndroidAppTestSuit.tabs
         private By doneButton = By.Id("btn_login");
         private By emailField = By.Id("auto_txt_email_address");
         private By passwordField = By.Id("txt_password");
+        private By facebookButton = By.Id("facebook_btn");
 
         public LoginTab(SeleniumWebdriver seleniumWebdriver) : base(seleniumWebdriver)
         {
@@ -24,6 +25,10 @@ namespace AndroidAppTestSuit.tabs
             if (button.Equals("Done"))
             {
                 buttonLocator = doneButton;
+            }
+            else if (button.Equals("Sign in with Facebook"))
+            {
+                buttonLocator = facebookButton;
             }
             else
             {

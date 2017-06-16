@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AndroidAppTestSuit.steps;
 using AndroidAppTestSuit.utils;
 using TechTalk.SpecFlow;
@@ -17,9 +13,9 @@ namespace AndroidAppTestSuit.hooks
         {
             //            ////   --------- comment  device name/OS version sections for running from VS
             //            ////            runtests.cmd "Google Nexus 5_4.4" testpath: Feature* Login*
-            //
-            //            ////      Choose a device name (ex. "Google Nexus 5", "Google Nexus 10", "Google Nexus 6_5.1")
-            //             Environment.SetEnvironmentVariable("env.DeviceNameAndOS", "Lenovo S860_4.4.2");
+            
+            ////      Choose a device name (ex. "Google Nexus 5", "Google Nexus 10", "Google Nexus 6_5.1")
+            Environment.SetEnvironmentVariable("env.DeviceNameAndOS", "Google Nexus 6_5.1_http://127.0.0.1:4723");
 
 
             //// Choose full path to app

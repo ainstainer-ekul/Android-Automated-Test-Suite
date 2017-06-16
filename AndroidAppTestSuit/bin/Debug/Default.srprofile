@@ -27,5 +27,5 @@
     </Steps>
   </DeploymentTransformation>
   
-<!--  <Filter>@featureInProgress</Filter>-->
+  <Filter>@featureInProgress</Filter>
 </TestProfile>

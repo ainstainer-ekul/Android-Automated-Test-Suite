@@ -41,6 +41,10 @@ namespace AndroidAppTestSuit.steps
             {
                 GetSuite().GetTabInit().GetBaseTab().TapButton(button);
             }
+            else if (tab.Equals("One more step"))
+            {
+                GetSuite().GetTabInit().GetOneMoreStepTab().TapButton(button);
+            }
             else
             {
                 throw new ArgumentException(String.Format("'{0}' - unsupported tab", tab));

@@ -61,47 +61,72 @@ namespace AndroidAppTestSuit.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("User can log in", SourceLine=2)]
+        [TechTalk.SpecRun.ScenarioAttribute("User can log in", SourceLine=3)]
         public virtual void UserCanLogIn()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User can log in", ((string[])(null)));
-#line 3
- this.ScenarioSetup(scenarioInfo);
 #line 4
-  testRunner.When("tap \'Sign In\' button on [Home] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ this.ScenarioSetup(scenarioInfo);
 #line 5
+  testRunner.When("tap \'Sign In\' button on [Home] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 6
   testRunner.And("fill in a email field with \'pre-setup evgeniy.kulikov@ainstainer.de\' on [Login] t" +
                     "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 6
-  testRunner.And("fill in a password field with \'Testing123\' on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 7
-  testRunner.And("tap \'Done\' button on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("fill in a password field with \'Testing123\' on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 8
-  testRunner.And("tap \'Ok\' button on [SoundCloud won\'t run without Google Play services] popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("tap \'Done\' button on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
+  testRunner.And("tap \'Ok\' button on [SoundCloud won\'t run without Google Play services] popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
   testRunner.Then("should see \'Search SoundCloud\' placeholder text \'Search\' field on [Search] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Error popup is displayed after an attempt to log in with wrong credentials", SourceLine=11)]
+        [TechTalk.SpecRun.ScenarioAttribute("Error popup is displayed after an attempt to log in with wrong credentials", SourceLine=13)]
         public virtual void ErrorPopupIsDisplayedAfterAnAttemptToLogInWithWrongCredentials()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Error popup is displayed after an attempt to log in with wrong credentials", ((string[])(null)));
-#line 12
- this.ScenarioSetup(scenarioInfo);
-#line 13
-  testRunner.When("tap \'Sign In\' button on [Home] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
+ this.ScenarioSetup(scenarioInfo);
+#line 15
+  testRunner.When("tap \'Sign In\' button on [Home] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
   testRunner.And("fill in a email field with \'pre-setup evgeniy.kulikov@ainstainer.de\' on [Login] t" +
                     "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
+#line 17
   testRunner.And("fill in a password field with \'wrongPass\' on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
+#line 18
   testRunner.And("tap \'Done\' button on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 17
+#line 19
   testRunner.Then("should see an error popup with a following text:", "We couldn’t sign you in. Sure you have the right email and password?", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("User can log in using facebook", new string[] {
+                "featureInProgress"}, SourceLine=26)]
+        public virtual void UserCanLogInUsingFacebook()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User can log in using facebook", new string[] {
+                        "featureInProgress"});
+#line 27
+ this.ScenarioSetup(scenarioInfo);
+#line 28
+  testRunner.When("tap \'Sign In\' button on [Home] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 29
+  testRunner.And("tap \'Sign in with Facebook\' button on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 30
+  testRunner.And("tap \'Continue\' button on [One more step] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+  testRunner.And("fill in a email field with \'pre-setup evgeniy.kulikov@ainstainer.de\' on [Facebook" +
+                    "] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 32
+  testRunner.And("fill in a password field with \'Testing159\' on [Facebook] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 33
+  testRunner.And("tap \'Log In\' button on [One more step] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

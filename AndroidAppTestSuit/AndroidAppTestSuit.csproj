@@ -121,11 +121,13 @@
     <Compile Include="tabs\more\MoreTab.cs" />
     <Compile Include="tabs\more\YouTab.cs" />
     <Compile Include="tabs\NavTab.cs" />
+    <Compile Include="tabs\OneMoreStepTab.cs" />
     <Compile Include="tabs\popup\ErrorPopup.cs" />
     <Compile Include="tabs\search\SearchTab.cs" />
     <Compile Include="tabs\Tab.cs" />
     <Compile Include="tabs\TabInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tabs\webview\FacebookWebView.cs" />
     <Compile Include="utils\Common.cs" />
     <Compile Include="webdriver\SeleniumWebdriver.cs" />
     <Compile Include="webdriver\SuiteRunner.cs" />

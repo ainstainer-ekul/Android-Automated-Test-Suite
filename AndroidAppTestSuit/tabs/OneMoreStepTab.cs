@@ -8,30 +8,27 @@ using OpenQA.Selenium;
 
 namespace AndroidAppTestSuit.tabs
 {
-    public class Tab
+    public class OneMoreStepTab : Tab
     {
         private By continueButton = By.Id("btn_accept_terms");
-
-        public SeleniumWebdriver webDriver;
-
-        public Tab(SeleniumWebdriver seleniumWebdriver)
+         
+        public OneMoreStepTab(SeleniumWebdriver seleniumWebdriver) : base(seleniumWebdriver)
         {
-            this.webDriver = seleniumWebdriver;
         }
 
-
-        public void TapButton(String button)
+        public void TapNavIcon(string button)
         {
-            By buttonLocator;
+            By elementLocator;
             if (button.Equals("Continue"))
             {
-                buttonLocator = continueButton;
+                elementLocator = continueButton;
             }
             else
             {
                 throw new ArgumentException(String.Format("'{0}' - unsupported button", button));
             }
-            webDriver.Click(buttonLocator);
+
+            webDriver.Click(elementLocator);
         }
     }
 }

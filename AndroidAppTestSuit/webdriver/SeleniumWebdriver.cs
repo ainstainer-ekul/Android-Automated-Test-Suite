@@ -373,5 +373,10 @@ namespace AndroidAppTestSuit.webdriver
         {
             ((AndroidDriver<IWebElement>)driver).ResetApp();
         }
+
+        public static explicit operator AndroidDriver<IWebElement>(SeleniumWebdriver v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
