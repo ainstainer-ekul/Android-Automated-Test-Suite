@@ -10,6 +10,7 @@
 7. Open a browser with the node url ( ex. http://127.0.0.1:4723/wd/hub/status ) and check than the node is running
 
 Example of config is showns on the screenshot: https://www.dropbox.com/s/mgw4tjtm0o9tv1z/node_config_for_virtual_device.png?dl=0
+
 Also examples of config files are placed in exampleOfConfigFiles folder.
 
 #### In order to launch autotests of a specific feature:
