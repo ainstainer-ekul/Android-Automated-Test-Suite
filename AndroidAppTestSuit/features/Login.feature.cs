@@ -99,10 +99,8 @@ namespace AndroidAppTestSuit.Features
   testRunner.And("fill in a password field with \'wrongPass\' on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
   testRunner.And("tap \'Done\' button on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
-  testRunner.And("tap \'Ok\' button on [SoundCloud won\'t run without Google Play services] popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 18
+#line 17
   testRunner.Then("should see an error popup with a following text:", "We couldn’t sign you in. Sure you have the right email and password?", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
