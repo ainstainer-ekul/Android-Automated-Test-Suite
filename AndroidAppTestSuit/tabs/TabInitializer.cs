@@ -58,7 +58,7 @@ namespace AndroidAppTestSuit.tabs
             return new Tab(webDriver);
         }
 
-        public Tab GetOneMoreStepTab()
+        public OneMoreStepTab GetOneMoreStepTab()
         {
             return new OneMoreStepTab(webDriver);
         }
@@ -66,6 +66,11 @@ namespace AndroidAppTestSuit.tabs
         public FacebookWebView GetFacebookWebView()
         {
             return new FacebookWebView(webDriver);
+        }
+
+        public FacebookConfirmLoginWebView GetFacebookConfirmLoginWebView()
+        {
+            return new FacebookConfirmLoginWebView(webDriver);
         }
     }
 }

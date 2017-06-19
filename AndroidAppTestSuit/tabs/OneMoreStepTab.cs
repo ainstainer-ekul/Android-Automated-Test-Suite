@@ -16,7 +16,7 @@ namespace AndroidAppTestSuit.tabs
         {
         }
 
-        public void TapNavIcon(string button)
+        public void TapButton(string button)
         {
             By elementLocator;
             if (button.Equals("Continue"))

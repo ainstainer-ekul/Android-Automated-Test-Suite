@@ -11,12 +11,12 @@ namespace AndroidAppTestSuit.hooks
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
-            //            ////   --------- comment  device name/OS version sections for running from VS
-            //            ////            runtests.cmd "Google Nexus 5_4.4" testpath: Feature* Login*
-            
-            ////      Choose a device name (ex. "Google Nexus 5", "Google Nexus 10", "Google Nexus 6_5.1")
-            Environment.SetEnvironmentVariable("env.DeviceNameAndOS", "Google Nexus 6_5.1_http://127.0.0.1:4723");
-
+//            //            ////   --------- comment  device name/OS version sections for running from VS
+//            //            ////            runtests.cmd "Google Nexus 5_4.4" testpath: Feature* Login*
+//            
+//            ////      Choose a device name (ex. "Google Nexus 5", "Google Nexus 10", "Google Nexus 6_5.1")
+//            Environment.SetEnvironmentVariable("env.DeviceNameAndOS", "Google Nexus 6_5.1_http://127.0.0.1:4723");
+//
 
             //// Choose full path to app
             Environment.SetEnvironmentVariable("env.AppVersion", "com.soundcloud.android_2017.05.30-beta-674_minAPI16(armeabi,armeabi-v7a,x86)(nodpi)_apkmirror.com.apk");

@@ -106,27 +106,31 @@ namespace AndroidAppTestSuit.Features
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("User can log in using facebook", new string[] {
-                "featureInProgress"}, SourceLine=26)]
+        [TechTalk.SpecRun.ScenarioAttribute("User can log in using facebook", SourceLine=25)]
         public virtual void UserCanLogInUsingFacebook()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User can log in using facebook", new string[] {
-                        "featureInProgress"});
-#line 27
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User can log in using facebook", ((string[])(null)));
+#line 26
  this.ScenarioSetup(scenarioInfo);
-#line 28
+#line 27
   testRunner.When("tap \'Sign In\' button on [Home] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
+#line 28
   testRunner.And("tap \'Sign in with Facebook\' button on [Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
+#line 29
   testRunner.And("tap \'Continue\' button on [One more step] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
+#line 30
   testRunner.And("fill in a email field with \'pre-setup evgeniy.kulikov@ainstainer.de\' on [Facebook" +
                     "] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
+#line 31
   testRunner.And("fill in a password field with \'Testing159\' on [Facebook] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 32
+  testRunner.And("tap \'Log In\' button on [Facebook] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 33
-  testRunner.And("tap \'Log In\' button on [One more step] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("tap \'Ok\' button on [Facebook Confirm Login] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+  testRunner.And("tap \'Ok\' button on [SoundCloud won\'t run without Google Play services] popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
+  testRunner.Then("should see \'Search SoundCloud\' placeholder text \'Search\' field on [Search] tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

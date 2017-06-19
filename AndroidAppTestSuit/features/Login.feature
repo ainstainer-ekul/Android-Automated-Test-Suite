@@ -22,16 +22,18 @@
 		"""
 
 
-###   Scenario 3 - in progress
-	@featureInProgress
+###   Scenario 3 - Done
 	Scenario: User can log in using facebook
 		When tap 'Sign In' button on [Home] tab
 		And tap 'Sign in with Facebook' button on [Login] tab
 		And tap 'Continue' button on [One more step] tab
 		And fill in a email field with 'pre-setup evgeniy.kulikov@ainstainer.de' on [Facebook] tab
 		And fill in a password field with 'Testing159' on [Facebook] tab
-		And tap 'Log In' button on [One more step] tab
-
+		And tap 'Log In' button on [Facebook] tab
+		And tap 'Ok' button on [Facebook Confirm Login] tab
+		And tap 'Ok' button on [SoundCloud won't run without Google Play services] popup
+		Then should see 'Search SoundCloud' placeholder text 'Search' field on [Search] tab
+		
 
 
 

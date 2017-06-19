@@ -3,24 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AndroidAppTestSuit.utils;
 using AndroidAppTestSuit.webdriver;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Appium.Android;
 
-namespace AndroidAppTestSuit.tabs
+namespace AndroidAppTestSuit.tabs.webview
 {
-    public class Tab
+    public class FacebookConfirmLoginWebView : Tab
     {
-        private string appContextName = "NATIVE_APP";
+        private By okButton = By.XPath("//*[@value='OK']");
 
-        private By okButton = By.Id("btn_accept_terms");
-        
-        public SeleniumWebdriver webDriver;
-
-        public Tab(SeleniumWebdriver seleniumWebdriver)
+        public FacebookConfirmLoginWebView(SeleniumWebdriver seleniumWebdriver) : base(seleniumWebdriver)
         {
-            this.webDriver = seleniumWebdriver;
+
         }
 
         public void TapButton(String button)
@@ -28,8 +22,6 @@ namespace AndroidAppTestSuit.tabs
             By buttonLocator;
             if (button.Equals("Ok"))
             {
-                ((AndroidDriver<IWebElement>)webDriver.GetDriver()).Context = appContextName;
-  
                 buttonLocator = okButton;
             }
             else

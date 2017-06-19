@@ -45,6 +45,14 @@ namespace AndroidAppTestSuit.steps
             {
                 GetSuite().GetTabInit().GetOneMoreStepTab().TapButton(button);
             }
+            else if (tab.Equals("Facebook"))
+            {
+                GetSuite().GetTabInit().GetFacebookWebView().TapButton(button);
+            }
+            else if (tab.Equals("Facebook Confirm Login"))
+            {
+                GetSuite().GetTabInit().GetFacebookConfirmLoginWebView().TapButton(button);
+            }
             else
             {
                 throw new ArgumentException(String.Format("'{0}' - unsupported tab", tab));
